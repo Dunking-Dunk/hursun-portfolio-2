@@ -1,0 +1,13 @@
+.preloader 
+    .preloader__wrapper
+        .preloader__header 
+            .preloader__header__sub
+                h1.preloader__header__name=preloader.data.name
+                .preloader__header__line
+                h3.preloader__header__location!=preloader.data.location.replace(/\n/g, '<br>')
+            .preloader__header__circle
+        p.preloader__title!=preloader.data.title.replace(/\n/g, '<br>')
+        .preloader__loading__bar 
+        .preloader__loading__percentage 0 %
+        btn.preloader__btn 
+            p click

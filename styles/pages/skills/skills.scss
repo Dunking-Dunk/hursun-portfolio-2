@@ -1,0 +1,93 @@
+
+
+.skills {
+    @extend %cover;
+    overflow: hidden;
+
+}
+
+.skills__wrapper {
+    overflow: hidden;
+    @extend %cover;
+    padding: 15rem;
+    display: flex;
+}
+
+.skill__main {
+ flex: 1;
+}
+
+.skills__title {
+    @extend %title-200;
+    color: $color-white;
+}
+
+.skills__point {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: $color-white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.35 ease-in-out;
+    left: 50%;
+    top: 30%;
+}
+
+.skills__point__number {
+    @extend %para-32;
+}
+
+
+
+.skills__point:hover .skills__point__container{
+    opacity: 1;
+}
+
+
+.skills__point.visible {
+    opacity: 1;
+}
+
+.skills__point__container {
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    transition: 0.35s ease;
+    opacity: 0;
+     left: 100%;   
+    z-index: 2;
+
+    background-color: rgba(0,0,0,0.5);
+ 
+}
+
+.skills__point__title {
+    @extend %title-64;
+
+    color: $color-white;
+}
+
+.skills__point__skill {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+
+}
+
+.skills__skill__name {
+    @extend %para-22;
+    color: $color-white;
+
+}
+
+.skills__skill__image {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}

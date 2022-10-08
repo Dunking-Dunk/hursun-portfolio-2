@@ -1,0 +1,26 @@
+extend ../base.pug
+
+block variables 
+ -var template = 'spotify'
+
+block content 
+    .spotify 
+        .spotify__wrapper 
+            .spotify__hero 
+                img.spotify__hero__image(data-src=spotify.spotify_img.url)
+                h1.spotify__hero__title!=spotify.description.replace(/\n/g, '<br>')
+                p.spotify__hero__description My favorite songs. current fav ❤️
+                p.spotify__hero__btn(data-spotify='https://open.spotify.com/user/k2wwolfed4viosa46g02vi06z') SPOTIFY
+            .spotify__musics
+                .spotify__musics__wrapper 
+                    each music in spotify.musics
+                        .spotify__musics__item
+                            img.music__item__image(data-src=music.music_image.url)
+                            .music__item__title 
+                                h5.music__title__name=music.title
+                                p.music__title__artist=music.artist
+                            p.music__item__duration=music.time
+                            svg.music__item__play(xmlns="http://www.w3.org/2000/svg" width="17" height="29" viewBox="0 0 17 29" fill="none" data-song=music.link)
+                                path(d="M0 0V28.5156L2.41699 26.4062L15.0732 15.1562L16.04 14.2578L15.0732 13.3594L2.41699 2.10938L0 0ZM2.8125 6.05469L12.041 14.2578L2.8125 22.4609V6.05469Z" fill="white" )
+                          
+                        

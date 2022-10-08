@@ -1,0 +1,236 @@
+.header {
+    position: fixed;
+    width: 100%;
+    height: 8rem;
+
+    color: $color-white;
+    padding: 0px 5rem;
+    z-index: 5;
+}
+
+.header__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-white;
+}
+
+.header__header {
+    display: flex;
+    align-items: flex-end;
+    gap:1rem;
+}
+
+.header__header__item {
+    @extend %title-32;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+
+    &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        content: '';
+        background-color: $color-white;
+        transform: scaleX(0);
+        transform-origin: right center;
+        transition: transform 0.7s $ease-out-expo;
+    }
+
+    &:hover {
+        &:after {
+            transform: scaleX(1);
+            transform-origin: left center;
+        }
+
+    }
+}
+
+.header__header__line {
+    display: block;
+    width: 0.2rem;
+    height: 5rem;
+    background-color: $color-white;
+}
+
+.header__time {
+ @extend %para-22;
+ text-transform: uppercase;
+}
+
+.audio__play {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+
+
+    &__span {
+        display: block;
+        width: 0.3rem;
+        max-height: 2rem;
+        height: 25%;
+        background-color: $color-white;
+    }
+
+    &__span.active:nth-of-type(1) {
+        height: 25%;
+        
+        animation: musicAnimation infinite 2s linear ;
+    }
+    &__span.active:nth-of-type(2) {
+        height: 25%;
+        
+        animation: musicAnimation infinite 2s linear 2s;
+    }
+    &__span.active:nth-of-type(3) {
+        height: 25%;
+        
+        animation: musicAnimation infinite 2s linear 6s;
+    }
+    &__span.active:nth-of-type(4) {
+        height: 25%;
+        
+        animation: musicAnimation infinite 2s linear 7s;
+    }
+    &__span.active:nth-of-type(5) {
+        height: 25%;
+        
+        animation: musicAnimation infinite 2s linear 4s;
+    }
+}
+
+@keyframes musicAnimation {
+    0% {
+        height: 0;
+    }
+
+    15% {
+        height: 25%;
+    }
+
+    30% {
+        height: 50%;
+    }
+
+    45% {
+        height: 100%;
+    }
+
+    60% {
+        height: 75%;
+    }
+
+    75% {
+        height: 25%;
+    }
+
+    90% {
+        height: 50%;
+    }
+
+    100% {
+        height: 0;
+    }
+}
+
+.header__menu__button {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__menu {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    transition: 0.3s ease-out;
+    overflow: hidden;
+}
+
+
+.header__menu.active {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    transition: 0.3s ease-in;
+
+    .header__menu__item {
+        display: block;
+    }
+
+    .header__menu__wrapper {
+        display: flex;
+    }
+    .header__menu__shadow {
+        display: block
+    }
+
+}
+
+.header__menu__item {
+    @extend %title-128;
+    color: $color-white;
+    display: none;
+    transition: 0.3s ease-in-out;
+    @extend %link--hidden;
+}
+
+.header__menu__item:hover {
+    color: red;
+    
+}
+
+.header__menu__wrapper {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 10rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+ 
+}
+
+.header__menu__items {
+    gap: 10rem;
+    flex: 1;
+       
+}
+
+.header__menu__stuffs {
+    @extend %para-64;
+    color: $color-white;
+    z-index: 1;
+}
+
+.header__menu__shadow {
+    display: none;
+    position: absolute;
+    right: -10rem;
+    top: -10rem;
+    width: 50rem;
+    height: 50rem;
+    border-radius: 50%;
+    background-color: red;
+    box-shadow: 1rem 1rem 5000rem 30rem red ;
+}
+

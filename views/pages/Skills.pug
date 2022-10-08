@@ -1,0 +1,19 @@
+extend ../base.pug
+
+block variables 
+ -var template = 'skills'
+
+block content
+    .skills
+        .skills__wrapper
+            .skills__main
+                h1.skills__title skills
+        each branch,index in skills
+            .skills__point(class=`skills__point-${index + 1}`) 
+                .skills__point__number=index+1
+                .skills__point__container 
+                    .skills__point__title=branch.branch__name
+                    each skill in branch.skills
+                        .skills__point__skill 
+                            img(data-src=skill.skill__image.url).skills__skill__image
+                            .skills__skill__name=skill.skill__name

@@ -1,0 +1,102 @@
+
+
+.work {
+@extend %cover;
+overflow: hidden;
+}
+
+.work__wrapper {
+    overflow: hidden;
+    padding: 10rem 5rem 70rem 5rem;
+}
+
+.work__title {
+    @extend %title-96;
+    color: $color-white;
+    margin-bottom: 5rem;
+}
+
+.work__works__container {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem;
+    border-bottom: 0.4rem solid $color-white;
+}
+
+.works__container__title {
+    @extend %title-96;
+    color: $color-white;
+    cursor: pointer;
+    position: relative;
+}
+
+.works__container__line {
+    height: 2rem;
+    width: 100%;
+    display: block;
+}
+
+.works__container__line__path {
+    stroke: $color-white;
+    fill: none;
+}
+
+.works__container__content {
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    transition: 2s ease;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: $color-white;
+    padding: 2rem;
+
+    @include media('<phone') {
+        width: 90%
+    }
+}
+
+.works__content__description {
+    @extend %mont-regular-32;
+}
+
+.works__content__item {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.works__content__content {
+    @extend %title-32;
+}   
+
+.works__content__text {
+    @extend %mont-regular-28;
+}
+
+
+.work__works__container:hover .works__container__content {
+    opacity: 1;
+     height: 40vh
+}
+
+.works__content__btn {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: $color-black;
+    color: $color-white;
+    @extend %title-32;
+    transition: 0.35s ease-in-out;
+
+
+    &:hover {
+        background-color: $color-red;
+    color: $color-black;
+    }
+}

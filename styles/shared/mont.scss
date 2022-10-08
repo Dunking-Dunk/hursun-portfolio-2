@@ -1,0 +1,64 @@
+%mont-semibold-24 {
+    font-size: 2.4rem;
+    font-family: $font-mont;
+    font-weight: 600;
+}
+
+%mont-regular-18 {
+    font-size: 1.8rem;
+    font-family: $font-mont;
+    font-weight: 400;
+}
+
+%mont-semibold-italic-64 {
+    font-size: 6.4rem;
+    font-family: $font-mont;
+    font-style: italic;
+    font-weight: 600;
+}
+
+%mont-semibold-italic-96 {
+    font-size: 9.6rem;
+    font-family: $font-mont;
+    font-style: italic;
+    font-weight: 600;
+}
+
+%mont-bold-96 {
+    font-size: 9.6rem;
+    font-family: $font-mont;
+    font-weight: 700;
+
+    @include media('<phone') {
+        font-size: 7.6rem;
+    }
+}
+
+%mont-medium-36 {
+    font-size: 3.6rem;
+    font-family: $font-mont;
+    font-weight: 500;
+}
+
+%mont-regular-36 {
+    font-size: 3.6rem;
+    font-family: $font-mont;
+    font-weight: 400;
+}
+%mont-regular-28 {
+    font-size: 2.8rem;
+    font-family: $font-mont;
+    font-weight: 400;
+}
+
+%mont-regular-32 {
+    font-size: 3.2rem;
+    font-family: $font-mont;
+    font-weight: 400;
+}
+
+%mont-bold-40 {
+    font-size: 4rem;
+    font-family: $font-mont;
+    font-weight: 700;
+}

@@ -1,0 +1,24 @@
+block variables 
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        base(href="/")
+        title HURSUN S S
+        link(rel="stylesheet" type="text/css" href="/main.css")
+  
+    body 
+        include ./partials/Preloader
+        include ./partials/Header
+        .load__container
+            .load__screen
+                img.load__screen__img(data-src='/hursun_cocosign.png')
+        .content#content(data-template=template)
+            block content  
+    canvas.webgl 
+    script(src="/main.js") 
+ 
+      

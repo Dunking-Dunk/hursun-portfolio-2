@@ -1,0 +1,26 @@
+extends ../base.pug
+
+block variables
+    -var template = 'works'
+
+block content
+    .work
+        .work__wrapper 
+            h1.work__title=works.title
+            each work, index in works.works
+                .work__works__container
+                    h1.works__container__title(id=`works__container-${index + 1}` data-src=work.image.url)=work.project__name   
+                    .works__container__content 
+                        p.works__content__text=work.project__description 
+                        .works__content__item
+                            h5.works__content__content type of project:
+                            p.works__content__text=work.type_of_project
+                        .works__content__item
+                            h5.works__content__content built:
+                            p.works__content__text=work.stack 
+                        .works__content__item
+                            h5.works__content__content status:
+                            p.works__content__text online <div class='online'></div>
+                        a.works__content__btn(href=work.link) link
+                  
+          

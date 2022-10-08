@@ -1,0 +1,125 @@
+.preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $color-black;
+    color: $color-white;
+    z-index: 100;
+}
+
+.preloader__wrapper {
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+    position: relative;
+}
+
+.preloader__header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.preloader__header__sub {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.preloader__header__line {
+    display: block;
+    width: 0.2rem;
+    height: 10rem;
+    background-color: $color-white;
+}
+
+.preloader__header__name {
+    @extend %title-96;
+}   
+
+.preloader__header__location {
+    @extend %title-32;
+    letter-spacing: 1rem;
+}
+
+.preloader__title {
+    @extend %title-40;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    letter-spacing: 1rem;
+    text-align: center;
+}
+
+.preloader__header__circle {
+    width: 5rem;
+    height: 5rem;
+    background-color: $color-white;
+    display: block;
+    border-radius: 50%;
+}
+
+.preloader__loading__bar {
+    display: block;
+    position: absolute;
+    right: 6rem;
+    bottom: 5rem;
+    width: 2.8rem;
+    max-height: 90%;
+    height: 0%;
+    background-color: $color-white;
+    transition: 0.35s ease;
+}
+
+.preloader__loading__percentage {
+    @extend %title-128;
+    position: absolute;
+    right: 15rem;
+    bottom: 5rem;
+
+}
+
+.preloader__btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: $color-red 0.5rem solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    opacity: 0;
+  
+    cursor: pointer;
+    &:after {
+        position: absolute;
+        content: '';
+        z-index: 2;
+        display: block;
+        width: 19rem;
+        height: 19rem;
+        border-radius: 50%;      
+        border-left: $color-black 2rem solid;
+        animation: preloader-btn-animation 2s infinite forwards;
+    }
+    & p {
+      @extend %title-64;
+    }
+}
+
+@keyframes preloader-btn-animation {
+    from {
+        transform: rotate(0deg) ;
+    }
+
+    to {
+        transform: rotate(360deg)  ;
+    }
+}
