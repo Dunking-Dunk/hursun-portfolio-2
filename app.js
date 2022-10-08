@@ -2,6 +2,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 import express from 'express'
+import cors from 'cors'
 import bodyParser from 'body-parser'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -15,6 +16,7 @@ const app = express()
 const PORT = process.env.PORT
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
+app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(methodOverride())
