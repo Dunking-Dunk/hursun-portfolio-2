@@ -22,7 +22,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(methodOverride())
 app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'views'))
-
 app.use(express.static(path.join(__dirname, 'public')))
 
 const client = prismic.createClient(process.env.PRISMIC_REPO_NAME, {
