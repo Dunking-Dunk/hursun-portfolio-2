@@ -9,6 +9,7 @@ import * as prismic from '@prismicio/client'
 import * as prismicH from '@prismicio/helpers'
 import fetch from 'node-fetch'
 import moment from 'moment'
+import methodOverride from 'method-override'
 
 const app = express()
 const PORT = process.env.PORT
@@ -16,6 +17,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+app.use(methodOverride())
 app.set('view engine', 'pug')
 app.set('views', path.join(__dirname, 'views'))
 
@@ -66,6 +68,6 @@ app.get('/spotify', async (req, res) => {
     res.render('pages/Spotify', { spotify: response.data })
 })
 
-app.listen(PORT, () => {
-    console.log('listening on port ' + PORT)
+app.listen(PORT || 3000, () => {
+    console.log('listening on port ' + PORT || 3000)
 })
