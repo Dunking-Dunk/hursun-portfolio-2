@@ -11,7 +11,7 @@ import fetch from 'node-fetch'
 import moment from 'moment'
 
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 app.use(bodyParser.json())
