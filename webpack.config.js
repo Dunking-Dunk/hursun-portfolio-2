@@ -10,7 +10,7 @@ import terserWebpackPlugin from 'terser-webpack-plugin'
 import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const IS_DEVELOPMENT = process.env.NODE_ENV === 'dev'
+const IS_DEVELOPMENT = process.env.NODE_ENV === 'production'
 
 const dirApp = path.join(__dirname, 'app')
 const dirStyles = path.join(__dirname, 'styles')
