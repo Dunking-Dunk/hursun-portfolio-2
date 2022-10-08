@@ -1,5 +1,5 @@
 import each from 'lodash/each.js'
-import normalizeWheel from 'normalize-wheel'
+import NormalizeWheel from 'normalize-wheel'
 
 import Canvas from './components/canvas/index.js'
 import Header from './components/Header.js'
@@ -137,7 +137,7 @@ class app {
     }
 
     onScroll(e) {
-        const normalize = normalizeWheel(e)
+        const normalize = NormalizeWheel(e)
         if (this.page && this.page.onScroll) {
             this.page.onScroll(normalize)
         }

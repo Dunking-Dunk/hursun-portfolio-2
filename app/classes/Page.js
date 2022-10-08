@@ -1,5 +1,6 @@
 import each from 'lodash/each.js'
 import GSAP from 'gsap'
+import Prefix from 'prefix'
 
 import AsyncLoad from './AsyncLoad.js'
 import AnimationTitle from '../animations/Title.js'
@@ -29,6 +30,8 @@ export default class Page {
             x: 0,
             y: 0,
         }
+
+        this.transformPrefix = Prefix('transform')
     }
 
     create() {
@@ -163,7 +166,9 @@ export default class Page {
         this.scroll.current = GSAP.utils.interpolate(this.scroll.current, this.scroll.target, 0.01)
 
         if (this.elements?.wrapper) {
-            this.elements.wrapper.style.transform = `translateY(-${this.scroll.current}px)`
+            this.elements.wrapper.style[
+                this.transformPrefix
+            ] = `translateY(-${this.scroll.current}px)`
         }
 
         if (this.elements?.bar) {
