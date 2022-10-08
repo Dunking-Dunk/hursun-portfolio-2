@@ -8,7 +8,8 @@
     "frontend:build": "webpack --progress --config webpack.config.build.js",
     "backend:build": "node app.js",
     "backend:development": "nodemon app.js",
-    "start": "concurrently --kill-others \"npm run backend:development\" \"npm run frontend:development\""
+    "start": "concurrently --kill-others \"npm run backend:development\" \"npm run frontend:development\"",
+    "heroku-prebuild": "npm install --only=dev"
   },
   "author": "Hursun",
   "license": "ISC",
