@@ -134,6 +134,7 @@ export default class Page {
     }
 
     onResize() {
+        console.log(this.scroll.limit)
         if (this.elements?.wrapper) {
             this.scroll.limit = this.elements.wrapper.clientHeight - window.innerHeight
         }
@@ -160,8 +161,8 @@ export default class Page {
     update() {
         this.scroll.target = GSAP.utils.clamp(0, this.scroll.limit, this.scroll.target)
 
-        if (this.scroll.target < 0.01) {
-            this.scroll.target = 0
+        if (this.scroll.current < 0.01) {
+            this.scroll.current = 0
         }
         this.scroll.current = GSAP.utils.interpolate(this.scroll.current, this.scroll.target, 0.01)
 

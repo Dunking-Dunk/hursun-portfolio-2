@@ -116,7 +116,7 @@ class app {
 
     addEventListener() {
         window.addEventListener('resize', this.onResize.bind(this))
-        window.addEventListener('wheel', this.onScroll.bind(this))
+        window.addEventListener('mousewheel', this.onScroll.bind(this))
 
         window.addEventListener('mousemove', this.onMousemove.bind(this))
 
