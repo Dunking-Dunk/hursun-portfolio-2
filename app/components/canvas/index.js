@@ -96,7 +96,6 @@ export default class Three {
         } else if (this.home) {
             this.destroyHome()
         }
-
         if (template === 'skills') {
             this.createSkills()
         } else if (this.skills) {

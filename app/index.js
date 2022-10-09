@@ -12,7 +12,7 @@ import Spotify from './pages/spotify/index.js'
 
 class app {
     constructor() {
-        this.prevUrl = ''
+        this.prevUrl = window.location.href
 
         this.createContent()
         this.createCanvas()
