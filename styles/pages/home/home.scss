@@ -1,10 +1,9 @@
 .home {
 @extend%cover;
-overflow: hidden;
+
 }
 
 .home__wrapper {
-    z-index: 3;
   color: $color-white;
     section {
         padding: 13rem 16rem 5rem 16rem;

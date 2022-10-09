@@ -17,6 +17,7 @@ body {
     @extend %cover;
     background-color: $color-black;
 }
+
 body::-webkit-scrollbar {
     width: 0.5rem;
 }
@@ -78,6 +79,7 @@ button {
     @extend %cover;
     padding-top: 9rem;
     z-index: 1;
+    overflow: hidden;
 }
 
 canvas {
