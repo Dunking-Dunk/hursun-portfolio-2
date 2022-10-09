@@ -67,12 +67,11 @@
     position: absolute;
     bottom: 0;
     left: -10%;
-    width: 400%;
+    width: 600%;
     height: 9rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-
     gap: 1rem;
     border: 2px solid $color-white;
 }
@@ -80,6 +79,7 @@
 .home__bar__text {
     @extend %mont-regular-36;
     color: $color-white;
+    text-align: center;
 }
 
 
