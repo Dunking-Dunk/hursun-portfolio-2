@@ -169,7 +169,7 @@ export default class Page {
         if (this.elements?.wrapper) {
             this.elements.wrapper.style[
                 this.transformPrefix
-            ] = `translateY(-${this.scroll.current}px)`
+            ] = `translate3d(0px,-${this.scroll.current}px, 0px)`
         }
 
         if (this.elements?.bar) {
