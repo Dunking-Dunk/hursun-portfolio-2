@@ -1,12 +1,11 @@
 .home {
 @extend%cover;
-
 }
 
 .home__wrapper {
   color: $color-white;
     section {
-        padding: 13rem 16rem 5rem 16rem;
+        padding: 10rem 16rem 5rem 16rem;
 
         @include media('<phone') {
             padding: 10rem 5rem 5rem 5rem;

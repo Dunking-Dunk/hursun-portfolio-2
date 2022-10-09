@@ -77,9 +77,9 @@ button {
 
 .content {
     @extend %cover;
-    padding-top: 9rem;
     z-index: 1;
     overflow: hidden;
+    padding-top: 9rem;
 }
 
 canvas {
