@@ -93,6 +93,7 @@ export default class Home {
             blending: THREE.AdditiveBlending,
             uniforms: {
                 uTime: { value: 0 },
+                uSize: { value: 10 * this.renderer.getPixelRatio() },
             },
         })
 
@@ -113,7 +114,7 @@ export default class Home {
         if (this.y.start > e.touches[0].clientY) {
             this.y.distance += 50
         } else {
-            this.y.distance -= 50
+            this.y.distance -= 100
         }
     }
 

@@ -1,0 +1,15 @@
+/*! ../../../shaders/human/fragment.glsl */
+
+/*! ../../../shaders/human/vertex.glsl */
+
+/*! ../../../shaders/particle/fragment.glsl */
+
+/*! ../../../shaders/particle/vertex.glsl */
+
+/*! gsap */
+
+/*! three */
+
+/*!*********************************************!*\
+  !*** ./app/components/canvas/home/index.js ***!
+  \*********************************************/
