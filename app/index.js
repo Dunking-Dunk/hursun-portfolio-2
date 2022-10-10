@@ -40,7 +40,6 @@ class app {
     }
 
     onPreloaded() {
-        this.content.style.display = 'block'
         this.header.createAudio()
         this.onResize()
         this.page.show()
@@ -64,8 +63,8 @@ class app {
 
     async onChange(url) {
         if (url !== this.prevUrl) {
-            if (this.prevUrl === 'http://localhost:3000/gallery' || this.prevUrl === null) {
-                console.log('lol')
+            if (this.prevUrl === 'http://localhost:3000/gallery') {
+                this.page.destroy()
                 this.content.style.height = '100%'
             }
             this.page.hide()
@@ -116,8 +115,8 @@ class app {
 
     addEventListener() {
         window.addEventListener('resize', this.onResize.bind(this))
-        window.addEventListener('mousewheel', this.onScroll.bind(this))
 
+        window.addEventListener('mousewheel', this.onScroll.bind(this))
         window.addEventListener('mousemove', this.onMousemove.bind(this))
 
         window.addEventListener('touchmove', this.onTouchMove.bind(this))

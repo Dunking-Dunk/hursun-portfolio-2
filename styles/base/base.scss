@@ -78,7 +78,6 @@ button {
 .content {
     @extend %cover;
     z-index: 1;
-    overflow: hidden;
     padding-top: 9rem;
 }
 

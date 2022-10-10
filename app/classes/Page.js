@@ -185,4 +185,11 @@ export default class Page {
             })
         }
     }
+
+    addEventListener() {}
+    removeEventListeners() {}
+
+    destroy() {
+        this.removeEventListeners()
+    }
 }

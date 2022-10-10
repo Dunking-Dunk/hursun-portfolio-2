@@ -1,5 +1,6 @@
 .home {
 @extend%cover;
+overflow: hidden;
 }
 
 .home__wrapper {
@@ -67,7 +68,7 @@
     position: absolute;
     bottom: 0;
     left: -10%;
-    width: 600%;
+    width: 1000%;
     height: 9rem;
     display: flex;
     flex-direction: row;
