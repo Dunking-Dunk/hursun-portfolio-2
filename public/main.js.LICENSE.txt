@@ -18,6 +18,26 @@
  * @author: Jack Doyle, jack@greensock.com
 */
 
+/*!
+ * Observer 3.11.1
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
+/*!
+ * ScrollTrigger 3.11.1
+ * https://greensock.com
+ *
+ * @license Copyright 2008-2022, GreenSock. All rights reserved.
+ * Subject to the terms at https://greensock.com/standard-license or for
+ * Club GreenSock members, the agreement issued with that membership.
+ * @author: Jack Doyle, jack@greensock.com
+*/
+
 /*! ../../../classes/Component.js */
 
 /*! ../../../shaders/human/fragment.glsl */
@@ -67,6 +87,8 @@
 /*! ./ExecutionEnvironment */
 
 /*! ./Logger */
+
+/*! ./Observer.js */
 
 /*! ./UserAgent_DEPRECATED */
 
@@ -392,6 +414,8 @@
 
 /*! gsap */
 
+/*! gsap/ScrollTrigger.js */
+
 /*! html-entities */
 
 /*! lodash/each.js */
@@ -546,6 +570,10 @@
 
 /*!***************************************!*\
   !*** ./node_modules/events/events.js ***!
+  \***************************************/
+
+/*!***************************************!*\
+  !*** ./node_modules/gsap/Observer.js ***!
   \***************************************/
 
 /*!***************************************!*\
@@ -806,6 +834,10 @@
 
 /*!********************************************!*\
   !*** ./app/shaders/particle/fragment.glsl ***!
+  \********************************************/
+
+/*!********************************************!*\
+  !*** ./node_modules/gsap/ScrollTrigger.js ***!
   \********************************************/
 
 /*!********************************************!*\
