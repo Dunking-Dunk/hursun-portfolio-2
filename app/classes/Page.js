@@ -163,9 +163,9 @@ export default class Page {
 
     onTouchMove(e) {
         if (this.y.start > e.touches[0].clientY) {
-            this.y.distance += 10
+            this.y.distance += 50
         } else {
-            this.y.distance -= 10
+            this.y.distance -= 50
         }
     }
 
