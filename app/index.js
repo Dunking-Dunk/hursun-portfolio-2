@@ -65,6 +65,7 @@ class app {
         if (url !== this.prevUrl) {
             if (this.prevUrl === 'http://localhost:3000/gallery') {
                 this.content.style.height = '100%'
+                console.log('lol')
             }
             this.page.hide()
             const request = await window.fetch(url)
