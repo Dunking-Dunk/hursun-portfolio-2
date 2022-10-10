@@ -165,7 +165,7 @@ export default class Page {
         if (this.y.start > e.touches[0].clientY) {
             this.y.distance += 50
         } else {
-            this.y.distance -= 50
+            this.y.distance -= 100
         }
     }
 
