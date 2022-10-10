@@ -31,6 +31,12 @@ export default class Page {
             y: 0,
         }
 
+        this.y = {
+            start: 0,
+            distance: 0,
+            end: 0,
+        }
+
         this.transformPrefix = Prefix('transform')
     }
 
@@ -151,13 +157,25 @@ export default class Page {
         this.mouse.y = (e.clientY - window.innerHeight) * 0.01 + 5
     }
 
-    onTouchMove() {}
+    onTouchStart(e) {
+        this.y.start = e.touches[0].clientY
+    }
 
-    onTouchStart() {}
+    onTouchMove(e) {
+        if (this.y.start > e.touches[0].clientY) {
+            this.y.distance += 10
+        } else {
+            this.y.distance -= 10
+        }
+    }
 
-    onTouchEnd() {}
+    onTouchEnd(e) {
+        // console.log(e.touches)
+        // this.y.end += e.touches[0].clientY
+    }
 
     update() {
+        this.scroll.target = this.y.distance
         this.scroll.target = GSAP.utils.clamp(0, this.scroll.limit, this.scroll.target)
 
         if (this.scroll.current < 0.01) {

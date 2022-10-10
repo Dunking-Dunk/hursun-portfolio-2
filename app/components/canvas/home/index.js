@@ -29,6 +29,12 @@ export default class Home {
             limit: document.querySelector('.home__wrapper').clientHeight,
         }
 
+        this.y = {
+            start: 0,
+            distance: 0,
+            end: 0,
+        }
+
         this.group = new THREE.Group()
         this.scene.add(this.group)
         this.createObject()
@@ -99,7 +105,20 @@ export default class Home {
         this.scroll.target += pixelY
     }
 
+    onTouchStart(e) {
+        this.y.start = e.touches[0].clientY
+    }
+
+    onTouchMove(e) {
+        if (this.y.start > e.touches[0].clientY) {
+            this.y.distance += 10
+        } else {
+            this.y.distance -= 10
+        }
+    }
+
     update(elapsedTime) {
+        this.scroll.target = this.y.distance
         this.scroll.target = GSAP.utils.clamp(0, this.scroll.limit, this.scroll.target)
         if (this.scroll.target < 1) {
             this.scroll.target = 0

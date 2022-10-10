@@ -197,6 +197,18 @@ export default class Three {
         }
     }
 
+    onTouchStart(e) {
+        if (this.home && this.home.onTouchStart) {
+            this.home.onTouchStart(e)
+        }
+    }
+
+    onTouchMove(e) {
+        if (this.home && this.home.onTouchMove) {
+            this.home.onTouchMove(e)
+        }
+    }
+
     onMousemove(e) {
         this.mouse.x = e.clientX / this.size.width - 0.5
         this.mouse.y = -(e.clientY / this.size.height) + 0.5

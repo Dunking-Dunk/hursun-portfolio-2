@@ -154,10 +154,30 @@ class app {
         }
     }
 
-    onTouchMove(e) {}
-    onTouchEnd() {}
+    onTouchStart(e) {
+        if (this.canvas && this.canvas.onTouchStart) {
+            this.canvas.onTouchStart(e)
+        }
 
-    onTouchStart() {}
+        if (this.page && this.page.onTouchStart) {
+            this.page.onTouchStart(e)
+        }
+    }
+
+    onTouchMove(e) {
+        if (this.canvas && this.canvas.onTouchMove) {
+            this.canvas.onTouchMove(e)
+        }
+
+        if (this.page && this.page.onTouchMove) {
+            this.page.onTouchMove(e)
+        }
+    }
+    onTouchEnd(e) {
+        if (this.page && this.page.onTouchEnd) {
+            this.page.onTouchEnd(e)
+        }
+    }
 
     update() {
         if (this.page && this.page.update) {
