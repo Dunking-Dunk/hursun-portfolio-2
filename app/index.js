@@ -63,9 +63,8 @@ class app {
 
     async onChange(url) {
         if (url !== this.prevUrl) {
-            if (this.prevUrl === 'http://localhost:3000/gallery') {
+            if (this.prevUrl.split('/')[3] === 'gallery') {
                 this.content.style.height = '100%'
-                console.log('lol')
             }
             this.page.hide()
             const request = await window.fetch(url)
