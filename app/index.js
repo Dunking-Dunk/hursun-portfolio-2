@@ -64,7 +64,6 @@ class app {
     async onChange(url) {
         if (url !== this.prevUrl) {
             if (this.prevUrl === 'http://localhost:3000/gallery') {
-                this.page.destroy()
                 this.content.style.height = '100%'
             }
             this.page.hide()
