@@ -40,7 +40,10 @@ app.use(async (req, res, next) => {
     res.locals.ctx = {
         prismicH,
     }
+
     res.locals.preloader = await client.getSingle('preloader')
+    res.locals.meta = await client.getSingle('meta')
+
     res.locals.times = moment().format('MMMM dddd h:mm')
     next()
 })
@@ -72,8 +75,11 @@ app.get('/gallery', async (req, res) => {
 
 app.get('/spotify', async (req, res) => {
     const response = await client.getSingle('spotify')
-    console.log(response.data.musics.map((data) => data))
     res.render('pages/Spotify', { spotify: response.data })
+})
+
+app.get('/me', async (req, res) => {
+    res.render('pages/Me', { spotify: response.data })
 })
 
 app.listen(PORT || 3000, () => {

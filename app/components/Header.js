@@ -18,7 +18,7 @@ export default class Header extends Component {
     }
 
     createAudio() {
-        this.mainAudio = new Audio('/Audio/mixkit-fragments-of-bangkok-625.mp3')
+        this.mainAudio = new Audio('/Audio/Cartoon - On & On (feat. Daniel Levi) [NCS Release].mp3')
         this.mainAudio.volume = 0.5
         this.mainAudio.loop = true
         this.mainAudio.play()
