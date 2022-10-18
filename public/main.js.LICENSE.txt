@@ -376,6 +376,8 @@
 
 /*! ./pages/home/index.js */
 
+/*! ./pages/hursun/index.js */
+
 /*! ./pages/skills/index.js */
 
 /*! ./pages/spotify/index.js */
@@ -495,6 +497,10 @@
 /*!**********************************!*\
   !*** ./app/pages/works/index.js ***!
   \**********************************/
+
+/*!***********************************!*\
+  !*** ./app/pages/hursun/index.js ***!
+  \***********************************/
 
 /*!***********************************!*\
   !*** ./app/pages/skills/index.js ***!
@@ -1241,7 +1247,7 @@
   \********************************************************************************/
 
 /*!***********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=8080&pathname=%2Fws&logging=info&overlay=true&reconnect=10&hot=true&live-reload=true ***!
+  !*** ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=8081&pathname=%2Fws&logging=info&overlay=true&reconnect=10&hot=true&live-reload=true ***!
   \***********************************************************************************************************************************************************************************/
 
 /**

@@ -78,8 +78,8 @@ app.get('/spotify', async (req, res) => {
     res.render('pages/Spotify', { spotify: response.data })
 })
 
-app.get('/me', async (req, res) => {
-    res.render('pages/Me', { spotify: response.data })
+app.get('/hursun', async (req, res) => {
+    res.render('pages/Hursun', {})
 })
 
 app.listen(PORT || 3000, () => {

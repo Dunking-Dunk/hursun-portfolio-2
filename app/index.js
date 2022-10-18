@@ -9,6 +9,7 @@ import Works from './pages/works/index.js'
 import Skills from './pages/skills/index.js'
 import Gallery from './pages/gallery/index.js'
 import Spotify from './pages/spotify/index.js'
+import Hursun from './pages/hursun/index.js'
 
 class app {
     constructor() {
@@ -57,6 +58,7 @@ class app {
             skills: new Skills(),
             gallery: new Gallery(),
             spotify: new Spotify(),
+            hursun: new Hursun(),
         }
         this.page = this.pages[this.template]
         this.page.create()
