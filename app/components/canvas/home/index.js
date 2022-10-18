@@ -17,7 +17,7 @@ export default class Home {
 
         this.uniforms = {
             time: { value: 0.0 },
-            speed: { value: 25.0 },
+            speed: { value: 10.0 },
             charSize: { value: { x: 1.0, y: 1.0 } },
             charResolution: { value: 10 },
             color: { value: new THREE.Color('red') },
