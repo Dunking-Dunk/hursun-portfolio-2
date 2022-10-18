@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import GSAP from 'gsap'
+import DetectionManager from '../../../classes/Detection.js'
 
 import vertexShader from '../../../shaders/human/vertex.glsl'
 import fragmentShader from '../../../shaders/human/fragment.glsl'
@@ -119,11 +120,19 @@ export default class Home {
     }
 
     update(elapsedTime) {
-        this.scroll.target = this.y.distance
-        this.scroll.target = GSAP.utils.clamp(0, this.scroll.limit, this.scroll.target)
+        if (DetectionManager.isDesktop()) {
+            this.scroll.target = GSAP.utils.clamp(0, this.scroll.limit, this.scroll.target)
+        } else {
+            this.scroll.target = GSAP.utils.clamp(0, this.scroll.limit, this.y.distance)
+        }
+
         if (this.scroll.target < 1) {
             this.scroll.target = 0
         }
+        if (this.y.distance < 0.01) {
+            this.y.distance = 0
+        }
+
         this.scroll.current = GSAP.utils.interpolate(this.scroll.current, this.scroll.target, 0.01)
 
         if (this.head) this.head.rotation.y = elapsedTime
@@ -131,10 +140,10 @@ export default class Home {
 
         if (this.scroll.current < 4600) {
             this.camera.rotation.x = this.scroll.current * 0.0003
-            this.camera.rotation.y = this.scroll.current * 0.01
-            this.camera.position.z = Math.cos(this.scroll.current * 0.01) * 5
-            this.camera.position.y = -this.scroll.current * 0.002
-            this.camera.position.x = Math.sin(this.scroll.current * 0.01) * 5
+            this.camera.rotation.y = this.scroll.current * 0.001
+            this.camera.position.z = Math.cos(this.scroll.current * 0.001) * 5
+            this.camera.position.y = -this.scroll.current * 0.004
+            this.camera.position.x = Math.sin(this.scroll.current * 0.001) * 5
             document.querySelector('.home__end').classList.remove('active')
         } else {
             GSAP.to(this.camera.position, {

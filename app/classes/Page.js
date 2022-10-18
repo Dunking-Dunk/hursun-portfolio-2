@@ -6,6 +6,7 @@ import AsyncLoad from './AsyncLoad.js'
 import AnimationTitle from '../animations/Title.js'
 import AnimationParagraph from '../animations/Paragraph.js'
 import AnimationHighlight from '../animations/Highlight.js'
+import DetectionManager from '../classes/Detection.js'
 
 export default class Page {
     constructor({ element, id, elements }) {
@@ -175,12 +176,21 @@ export default class Page {
     }
 
     update() {
-        this.scroll.target = this.y.distance
-        this.scroll.target = GSAP.utils.clamp(0, this.scroll.limit, this.scroll.target)
+        console.log(this.scroll.target)
+        if (DetectionManager.isDesktop()) {
+            this.scroll.target = GSAP.utils.clamp(0, this.scroll.limit, this.scroll.target)
+        } else {
+            this.scroll.target = GSAP.utils.clamp(0, this.scroll.limit, this.y.distance)
+        }
 
         if (this.scroll.current < 0.01) {
             this.scroll.current = 0
         }
+
+        if (this.y.distance < 0.01) {
+            this.y.distance = 0
+        }
+
         this.scroll.current = GSAP.utils.interpolate(this.scroll.current, this.scroll.target, 0.01)
 
         if (this.elements?.wrapper) {

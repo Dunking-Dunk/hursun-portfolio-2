@@ -40,6 +40,8 @@
 
 /*! ../../../classes/Component.js */
 
+/*! ../../../classes/Detection.js */
+
 /*! ../../../shaders/human/fragment.glsl */
 
 /*! ../../../shaders/human/vertex.glsl */
@@ -65,6 +67,8 @@
 /*! ../classes/Animation.js */
 
 /*! ../classes/Component.js */
+
+/*! ../classes/Detection.js */
 
 /*! ../modules/logger/index.js */
 
@@ -478,6 +482,10 @@
 
 /*!**********************************!*\
   !*** ./app/classes/Component.js ***!
+  \**********************************/
+
+/*!**********************************!*\
+  !*** ./app/classes/Detection.js ***!
   \**********************************/
 
 /*!**********************************!*\

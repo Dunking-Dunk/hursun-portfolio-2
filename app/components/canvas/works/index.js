@@ -11,7 +11,7 @@ export default class works {
         this.group = new THREE.Group()
         this.scene.add(this.group)
         this.textureLoader = textureLoader
-        this.containers = document.querySelectorAll('.works__container__title')
+        this.containers = document.querySelectorAll('.work__works__container')
 
         this.addEventListener()
         this.createGeometry()
@@ -45,6 +45,15 @@ export default class works {
                     }
                 })
             })
+            //     element.addEventListener('click', (event) => {
+            //         each(this.medias, (media) => {
+            //             if (media.id === element.id) {
+            //                 media.show()
+            //             } else {
+            //                 media.hide()
+            //             }
+            //         })
+            //     })
         })
     }
 

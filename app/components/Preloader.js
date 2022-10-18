@@ -76,6 +76,7 @@ export default class Preloader extends Component {
 
             this.animateOut.to(this.elements.btn, {
                 autoAlpha: 1,
+                display: 'flex',
                 duration: 1,
             })
         })

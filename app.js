@@ -11,6 +11,7 @@ import * as prismicH from '@prismicio/helpers'
 import fetch from 'node-fetch'
 import moment from 'moment'
 import methodOverride from 'method-override'
+import UAParser from 'ua-parser-js'
 
 const app = express()
 const PORT = process.env.PORT
@@ -30,6 +31,12 @@ const client = prismic.createClient(process.env.PRISMIC_REPO_NAME, {
 })
 
 app.use(async (req, res, next) => {
+    const ua = UAParser(req.headers['user-agent'])
+
+    res.locals.isDesktop = ua.device.type === undefined
+    res.locals.isPhone = ua.device.type === 'mobile'
+    res.locals.isTablet = ua.device.type === 'tablet'
+
     res.locals.ctx = {
         prismicH,
     }

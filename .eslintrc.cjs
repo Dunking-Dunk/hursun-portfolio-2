@@ -2,7 +2,7 @@ module.exports = {
     root: true,
     extends: ['plugin:prettier/recommended'],
     rules: {
-        'max-len': [1, { code: 200 }],
+        'max-len': [1, { code: 500 }],
         'prettier/prettier': [1, { printWidth: 100 }],
     },
     globals: {

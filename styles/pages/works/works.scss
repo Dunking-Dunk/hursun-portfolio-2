@@ -1,8 +1,7 @@
-
-
 .work {
 @extend %cover;
 overflow: hidden;
+background-color: rgba(0,0,0,0.5);
 }
 
 .work__wrapper {

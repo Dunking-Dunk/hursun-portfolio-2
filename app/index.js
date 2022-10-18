@@ -100,7 +100,7 @@ class app {
         const links = document.querySelectorAll('a')
         each(links, (link) => {
             let restricted =
-                'mailto:sshursun@gmail.com, https://www.instagram.com/__hursun_ss__/, https://twitter.com/hursun2004, https://www.linkedin.com/in/hursun-ss-377659233/'
+                'mailto:sshursun@gmail.com, https://www.instagram.com/__hursun_ss__/, https://twitter.com/hursun2004, https://www.linkedin.com/in/hursun-ss-377659233/, https://portrrait.netlify.app/, https://chatapp-mocha.vercel.app/, https://movies-delta-coral.vercel.app/,  https://covid-web2.vercel.app/, https://socialize.vercel.app/'
 
             link.onclick = (e) => {
                 if (restricted.indexOf(link.href) === -1) {
