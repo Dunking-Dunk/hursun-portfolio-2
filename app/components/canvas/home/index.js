@@ -17,11 +17,11 @@ export default class Home {
 
         this.uniforms = {
             time: { value: 0.0 },
-            speed: { value: 50.0 },
+            speed: { value: 25.0 },
             charSize: { value: { x: 1.0, y: 1.0 } },
-            charResolution: { value: 5.5 },
+            charResolution: { value: 10 },
             color: { value: new THREE.Color('red') },
-            resolution: { value: { x: 3.0, y: 5.0 } },
+            resolution: { value: { x: 2.0, y: 2.0 } },
         }
 
         this.scroll = {
