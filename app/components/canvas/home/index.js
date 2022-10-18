@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import GSAP from 'gsap'
 import DetectionManager from '../../../classes/Detection.js'
+import Prefix from 'prefix'
 
 import vertexShader from '../../../shaders/human/vertex.glsl'
 import fragmentShader from '../../../shaders/human/fragment.glsl'
@@ -35,7 +36,7 @@ export default class Home {
             distance: 0,
             end: 0,
         }
-
+        this.transformPrefix = Prefix('transform')
         this.group = new THREE.Group()
         this.scene.add(this.group)
         this.createObject()

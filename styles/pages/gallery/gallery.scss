@@ -38,12 +38,13 @@
   align-items:center;
   z-index: 3;
   justify-content:space-evenly;
-  object-fit: contain;
+
 }
 
 #detailImg {
   width:85%;
   height:85%;
+  object-fit: contain;
 }
 
 #detailTxt {
