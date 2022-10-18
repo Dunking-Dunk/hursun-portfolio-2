@@ -17,11 +17,11 @@ export default class Home {
 
         this.uniforms = {
             time: { value: 0.0 },
-            speed: { value: 18.0 },
+            speed: { value: 50.0 },
             charSize: { value: { x: 1.0, y: 1.0 } },
             charResolution: { value: 5.5 },
             color: { value: new THREE.Color('red') },
-            resolution: { value: { x: 1.0, y: 1.0 } },
+            resolution: { value: { x: 3.0, y: 5.0 } },
         }
 
         this.scroll = {
@@ -139,7 +139,7 @@ export default class Home {
         if (this.particleMaterial) this.particleMaterial.uniforms.uTime.value = elapsedTime
 
         if (this.scroll.current < 4600) {
-            this.camera.rotation.x = this.scroll.current * 0.0004
+            this.camera.rotation.x = this.scroll.current * 0.0001
             this.camera.rotation.y = this.scroll.current * 0.001
             this.camera.position.z = Math.cos(this.scroll.current * 0.001) * 5
             this.camera.position.y = -this.scroll.current * 0.003
