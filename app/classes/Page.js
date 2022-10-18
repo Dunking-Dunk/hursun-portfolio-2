@@ -176,7 +176,6 @@ export default class Page {
     }
 
     update() {
-        console.log(this.scroll.target)
         if (DetectionManager.isDesktop()) {
             this.scroll.target = GSAP.utils.clamp(0, this.scroll.limit, this.scroll.target)
         } else {

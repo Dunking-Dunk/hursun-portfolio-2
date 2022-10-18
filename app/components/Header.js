@@ -10,6 +10,7 @@ export default class Header extends Component {
                 menu: '.header__menu',
                 audioBtn: '.audio__play',
                 audioSpan: '.audio__play__span',
+                text: '.header__header__item',
             },
         })
 
@@ -42,5 +43,10 @@ export default class Header extends Component {
                 this.mainAudio.pause()
             }
         })
+    }
+
+    createText(text) {
+        if (text === '/') this.elements.text[1].innerText = 'lobby'
+        else this.elements.text[1].innerText = text
     }
 }

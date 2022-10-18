@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import GSAP from 'gsap'
 import Component from '../../../classes/Component.js'
+import DetectionManager from '../../../classes/Detection.js'
 
 import fragmentShader from '../../../shaders/human/fragment.glsl'
 import vertexShader from '../../../shaders/human/vertex.glsl'
@@ -135,8 +136,14 @@ export default class Skills extends Component {
         const deltaTime = elapsedTime - this.time
         this.time = elapsedTime
 
-        this.camera.position.x = Math.sin(elapsedTime * 0.1) * 10
-        this.camera.position.z = Math.cos(elapsedTime * 0.1) * 10
+        if (DetectionManager.isDesktop()) {
+            this.camera.position.x = Math.sin(elapsedTime * 0.1) * 10
+            this.camera.position.z = Math.cos(elapsedTime * 0.1) * 10
+        } else {
+            this.camera.position.x = Math.sin(elapsedTime * 0.1) * 15
+            this.camera.position.z = Math.cos(elapsedTime * 0.1) * 15
+        }
+
         this.camera.position.y = 0
         this.camera.lookAt(this.sphere.position)
 

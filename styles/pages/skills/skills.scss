@@ -1,5 +1,3 @@
-
-
 .skills {
     @extend %cover;
     overflow: hidden;
@@ -11,11 +9,13 @@
     @extend %cover;
     padding: 15rem;
     display: flex;
+
+    @include media('<phone') {
+        padding: 8rem;
+    }
 }
 
-.skill__main {
- flex: 1;
-}
+.skill__main {}
 
 .skills__title {
     @extend %title-200;

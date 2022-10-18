@@ -47,6 +47,7 @@ class app {
 
     createHeader() {
         this.header = new Header()
+        this.header.createText(window.location.pathname)
     }
 
     createPages() {
@@ -68,7 +69,6 @@ class app {
             }
             this.page.hide()
             const request = await window.fetch(url)
-
             if (request.status === 200) {
                 const html = await request.text()
                 const div = document.createElement('div')
@@ -81,6 +81,8 @@ class app {
 
                 this.content.setAttribute('data-template', this.template)
                 this.content.innerHTML = divContent.innerHTML
+
+                this.header.createText(window.location.pathname)
 
                 this.page = this.pages[this.template]
                 this.page.create()

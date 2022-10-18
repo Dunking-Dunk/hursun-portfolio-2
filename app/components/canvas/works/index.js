@@ -81,9 +81,9 @@ export default class works {
     }
 
     update(elapsedTime) {
+        this.camera.position.set(0, 0, this.medias.length + 1)
+        this.camera.rotation.set(0, 0, 0)
         if (this.medias && elapsedTime < 2) {
-            this.camera.position.set(0, 0, this.medias.length + 1)
-            this.camera.rotation.set(0, 0, 0)
         }
 
         each(this.medias, (media) => {
