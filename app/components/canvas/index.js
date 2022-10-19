@@ -141,7 +141,7 @@ export default class Three {
 
     createBackground() {
         this.plane = new THREE.Mesh(
-            new THREE.BoxGeometry(700, 500, 500),
+            new THREE.BoxGeometry(200, 200, 300),
             new THREE.RawShaderMaterial({
                 vertexShader,
                 fragmentShader,

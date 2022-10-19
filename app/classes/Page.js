@@ -6,6 +6,7 @@ import AsyncLoad from './AsyncLoad.js'
 import AnimationTitle from '../animations/Title.js'
 import AnimationParagraph from '../animations/Paragraph.js'
 import AnimationHighlight from '../animations/Highlight.js'
+import AnimationCursor from '../animations/Cursor.js'
 import DetectionManager from '../classes/Detection.js'
 
 export default class Page {
@@ -18,6 +19,7 @@ export default class Page {
             animationTitles: '[data-animation="title"]',
             animationParagraph: '[data-animation="paragraph"]',
             animationHighlight: '[data-animation="highlight"]',
+            animationCursor: '[data-animation="cursor"]',
             preloaders: '[data-src]',
         }
         this.id = id
@@ -84,6 +86,10 @@ export default class Page {
 
         each(this.elements.animationHighlight, (element) => {
             new AnimationHighlight({ element })
+        })
+
+        each(this.elements.animationCursor, (element) => {
+            new AnimationCursor({ element })
         })
     }
 
@@ -164,7 +170,7 @@ export default class Page {
 
     onTouchMove(e) {
         if (this.y.start > e.touches[0].clientY) {
-            this.y.distance += 50
+            this.y.distance += 100
         } else {
             this.y.distance -= 100
         }

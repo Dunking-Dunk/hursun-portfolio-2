@@ -1,6 +1,7 @@
 import each from 'lodash/each.js'
 import NormalizeWheel from 'normalize-wheel'
 
+import Cursor from './components/cursor.js'
 import Canvas from './components/canvas/index.js'
 import Header from './components/Header.js'
 import Preloader from './components/Preloader.js'
@@ -19,6 +20,7 @@ class app {
         this.createCanvas()
         this.createPreloader()
         this.createHeader()
+        this.createCursor()
         this.createPages()
         this.addLinkListeners()
         this.addEventListener()
@@ -49,6 +51,10 @@ class app {
     createHeader() {
         this.header = new Header()
         this.header.createText(window.location.pathname)
+    }
+
+    createCursor() {
+        this.cursor = new Cursor('.cursor')
     }
 
     createPages() {
@@ -119,7 +125,7 @@ class app {
     addEventListener() {
         window.addEventListener('resize', this.onResize.bind(this))
 
-        window.addEventListener('mousewheel', this.onScroll.bind(this))
+        window.addEventListener('wheel', this.onScroll.bind(this))
         window.addEventListener('mousemove', this.onMousemove.bind(this))
 
         window.addEventListener('touchmove', this.onTouchMove.bind(this))

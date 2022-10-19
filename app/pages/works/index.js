@@ -1,5 +1,5 @@
 import Page from '../../classes/Page.js'
-import Line from '../../classes/Line.js'
+// import Line from '../../classes/Line.js'
 
 export default class Works extends Page {
     constructor() {
@@ -15,6 +15,6 @@ export default class Works extends Page {
     }
 
     createLine() {
-        new Line('.work__works__container', document.querySelector('.works__container__line__path'))
+        // new Line('.work__works__container', document.querySelector('.works__container__line__path'))
     }
 }

@@ -10,7 +10,9 @@ html{
     @include media('<phone') {
         font-size: calc(100vw / 750 * 10);
     }
+    overflow-x: hidden; 
 }
+
 
 body {
     @extend %cover;
@@ -85,6 +87,25 @@ canvas {
     left: 0;
     top: 0;
     outline: none;
+}
+
+.cursor {
+    position: absolute;
+    background-color: $color-red;
+    width: 5rem;
+    height:5rem;
+    border-radius: 50%;
+    z-index: 8;
+    pointer-events: none;
+    overflow: hidden;
+    
+}
+
+.cursor.active {
+    width: 15rem;
+    height: 15rem;
+    background-color: transparent;
+    backdrop-filter:  invert(1) grayscale(1);
 }
 
 [data-animation='title'] ,
