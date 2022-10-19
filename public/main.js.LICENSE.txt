@@ -300,6 +300,8 @@
 
 /*! ./_toSource */
 
+/*! ./classes/Detection.js */
+
 /*! ./clients/WebSocketClient.js */
 
 /*! ./components/Header.js */

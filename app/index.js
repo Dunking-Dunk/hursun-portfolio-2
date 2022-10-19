@@ -1,5 +1,6 @@
 import each from 'lodash/each.js'
 import NormalizeWheel from 'normalize-wheel'
+import DetectionManager from './classes/Detection.js'
 
 import Cursor from './components/cursor.js'
 import Canvas from './components/canvas/index.js'
@@ -54,7 +55,7 @@ class app {
     }
 
     createCursor() {
-        this.cursor = new Cursor('.cursor')
+        if (DetectionManager.isDesktop()) this.cursor = new Cursor('.cursor')
     }
 
     createPages() {

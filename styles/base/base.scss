@@ -98,7 +98,11 @@ canvas {
     z-index: 8;
     pointer-events: none;
     overflow: hidden;
-    
+
+    @include media('<phone') {
+        display: none;
+    }
+   
 }
 
 .cursor.active {
