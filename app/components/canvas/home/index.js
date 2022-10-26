@@ -140,10 +140,10 @@ export default class Home {
         if (this.particleMaterial) this.particleMaterial.uniforms.uTime.value = elapsedTime
 
         if (this.scroll.current < 4600) {
-            this.camera.rotation.x = this.scroll.current * 0.0001
+            this.camera.rotation.x = this.scroll.current * 0.0003
             this.camera.rotation.y = this.scroll.current * 0.001
             this.camera.position.z = Math.cos(this.scroll.current * 0.001) * 5
-            this.camera.position.y = -this.scroll.current * 0.003
+            this.camera.position.y = -this.scroll.current * 0.0001
             this.camera.position.x = Math.sin(this.scroll.current * 0.001) * 5
             document.querySelector('.home__end').classList.remove('active')
         } else {

@@ -98,6 +98,9 @@ canvas {
     z-index: 8;
     pointer-events: none;
     overflow: hidden;
+    transition-property: width, height;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
 
     @include media('<phone') {
         display: none;

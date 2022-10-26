@@ -8,7 +8,7 @@ block content
         .work__wrapper 
             h1.work__title=works.title
             each work, index in works.works
-                .work__works__container(id=`works__container-${index + 1}` data-src=work.image.url)
+                .work__works__container(id=`works__container-${index + 1}` data-src=work.image.url data-animation='cursor')
                     h1.works__container__title=work.project__name   
                     .works__container__content 
                         p.works__content__text=work.project__description 

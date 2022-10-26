@@ -40,11 +40,11 @@ export default class Preloader extends Component {
     }
 
     onAssentLoaded() {
-        const percent = this.length / this.total
+        this.percent = this.length / this.total
 
-        this.elements.loadingPercentage.innerHTML = `${Math.round(percent * 100)}%`
-        this.elements.loadingBar.style.height = `${Math.round(percent * 100)}%`
-        if (percent === 1) {
+        this.elements.loadingPercentage.innerHTML = `${Math.round(this.percent * 100)}%`
+        this.elements.loadingBar.style.height = `${Math.round(this.percent * 100)}%`
+        if (this.percent === 1) {
             this.onLoaded()
         }
     }

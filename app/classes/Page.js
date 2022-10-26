@@ -95,7 +95,7 @@ export default class Page {
 
     createAudio() {
         this.sideAudio = new Audio('/Audio/mixkit-interface-hint-notification-911.wav')
-        this.sideAudio.volume = 1
+        this.sideAudio.volume = 0.4
         this.elements.loadScreen.addEventListener('click', () => {
             this.sideAudio.play()
         })

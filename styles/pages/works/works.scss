@@ -46,7 +46,7 @@ background-color: rgba(0,0,0,0.5);
     flex-direction: column;
     justify-content: space-evenly;
     width: 50%;
-    transition: 2s ease;
+    transition: 1s ease-in-out;
     opacity: 0;
     background-color: rgba(0,0,0,0.5);
     color: $color-white;
@@ -91,7 +91,7 @@ background-color: rgba(0,0,0,0.5);
     background-color: $color-black;
     color: $color-white;
     @extend %title-32;
-    transition: 0.35s ease-in-out;
+    transition: 0.1s ease-in-out;
 
 
     &:hover {
