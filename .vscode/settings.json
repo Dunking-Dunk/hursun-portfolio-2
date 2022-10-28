@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/158324e6-5b88-45c4-ab41-e7ed404cbdf4/AppServices/subscriptions/158324e6-5b88-45c4-ab41-e7ed404cbdf4/resourceGroups/hursun-portfolio_group-9f3d/providers/Microsoft.Web/sites/hursun-portfolio",
+    "appService.deploySubpath": "."
+}
