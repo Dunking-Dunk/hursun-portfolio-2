@@ -28,7 +28,7 @@ export default class Home {
         this.scroll = {
             target: 0,
             current: 0,
-            limit: document.querySelector('.home__wrapper').clientHeight,
+            limit: 6000,
         }
 
         this.y = {
@@ -133,13 +133,14 @@ export default class Home {
         if (this.y.distance < 0.01) {
             this.y.distance = 0
         }
+        console.log(this.scroll.limit, this.scroll.current)
 
         this.scroll.current = GSAP.utils.interpolate(this.scroll.current, this.scroll.target, 0.01)
 
         if (this.head) this.head.rotation.y = elapsedTime
         if (this.particleMaterial) this.particleMaterial.uniforms.uTime.value = elapsedTime
 
-        if (this.scroll.current < 4600) {
+        if (this.scroll.current < 5400) {
             this.camera.rotation.x = this.scroll.current * 0.0003
             this.camera.rotation.y = this.scroll.current * 0.001
             this.camera.position.z = Math.cos(this.scroll.current * 0.001) * 5
