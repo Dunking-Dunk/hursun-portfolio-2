@@ -17,8 +17,15 @@
             .header__menu 
                 .header__menu__wrapper
                     .header__menu__items
-                        a.header__menu__item(href='/skills') SKILLS
-                        a.header__menu__item(href='/works')  WORKS
+                        if location =='/'
+                            a.header__menu__item(href='/skills') SKILLS
+                            a.header__menu__item(href='/works')  WORKS
+                        else if location == '/skills'
+                            a.header__menu__item(href='/') HOME
+                            a.header__menu__item(href='/works')  WORKS
+                        else 
+                            a.header__menu__item(href='/') HOME
+                            a.header__menu__item(href='/skills') SKILLS
 
                     .header__menu__stuffs click anyhere to backout
                 .header__menu__shadow

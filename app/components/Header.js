@@ -11,6 +11,7 @@ export default class Header extends Component {
                 audioBtn: '.audio__play',
                 audioSpan: '.audio__play__span',
                 text: '.header__header__item',
+                darkBtn: '.header__dark__mode',
             },
         })
 
@@ -18,10 +19,10 @@ export default class Header extends Component {
     }
 
     createAudio() {
-        this.mainAudio = new Audio('/Audio/Cartoon - On & On (feat. Daniel Levi) [NCS Release].mp3')
-        this.mainAudio.volume = 0.5
-        this.mainAudio.loop = true
-        this.mainAudio.play()
+        // this.mainAudio = new Audio('/Audio/Cartoon - On & On (feat. Daniel Levi) [NCS Release].mp3')
+        // this.mainAudio.volume = 0.5
+        // this.mainAudio.loop = true
+        // this.mainAudio.play()
         each(this.elements.audioSpan, (element) => {
             element.classList.toggle('active')
         })
@@ -46,7 +47,7 @@ export default class Header extends Component {
     }
 
     createText(text) {
-        if (text === '/') this.elements.text[1].innerText = 'lobby'
+        if (text === '') this.elements.text[1].innerText = 'lobby'
         else this.elements.text[1].innerText = text
     }
 }

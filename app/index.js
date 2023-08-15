@@ -51,7 +51,7 @@ class app {
 
     createHeader() {
         this.header = new Header()
-        this.header.createText(window.location.pathname)
+        this.header.createText(window.location.pathname.split('/')[1])
     }
 
     createCursor() {
@@ -86,12 +86,13 @@ class app {
                 window.history.pushState({}, '', url)
 
                 const divContent = div.querySelector('.content')
+                const headerContent = div.querySelector('.header__menu')
                 this.template = divContent.getAttribute('data-template')
 
                 this.content.setAttribute('data-template', this.template)
                 this.content.innerHTML = divContent.innerHTML
-
-                this.header.createText(window.location.pathname)
+                document.querySelector('.header__menu').innerHTML = headerContent.innerHTML
+                this.header.createText(window.location.pathname.split('/')[1])
 
                 this.page = this.pages[this.template]
                 this.page.create()

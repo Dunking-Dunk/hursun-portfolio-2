@@ -45,6 +45,7 @@ app.use(async (req, res, next) => {
     res.locals.meta = await client.getSingle('meta')
 
     res.locals.times = moment().format('MMMM dddd h:mm')
+    res.locals.location = req.originalUrl
     next()
 })
 

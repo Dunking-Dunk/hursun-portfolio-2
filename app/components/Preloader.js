@@ -24,13 +24,15 @@ export default class Preloader extends Component {
 
     async createLoader() {
         this.total = this.elements.images.length
-        this.manager.onProgress = () => {
-            this.total += 1
-            this.length += 1
-        }
+
         this.manager.onLoad = () => {
             this.onAssentLoaded()
         }
+
+        document.fonts.onloadingdone = () => {
+            this.onAssentLoaded()
+        }
+
         each(this.elements.images, (image) => {
             this.length += 1
             image.onload = this.onAssentLoaded()

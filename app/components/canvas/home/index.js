@@ -21,7 +21,7 @@ export default class Home {
             speed: { value: 10.0 },
             charSize: { value: { x: 1.0, y: 1.0 } },
             charResolution: { value: 10 },
-            color: { value: new THREE.Color('#D2001A') },
+            color: { value: new THREE.Color('#1A5D1A') },
             resolution: { value: { x: 2.0, y: 2.0 } },
         }
 
@@ -133,7 +133,6 @@ export default class Home {
         if (this.y.distance < 0.01) {
             this.y.distance = 0
         }
-        console.log(this.scroll.limit, this.scroll.current)
 
         this.scroll.current = GSAP.utils.interpolate(this.scroll.current, this.scroll.target, 0.01)
 
