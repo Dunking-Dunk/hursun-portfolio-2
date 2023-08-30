@@ -11,6 +11,6 @@ void main(){
         uv.x+=.2/i*cos(i*2.5*uv.y+uTime);
         uv.y+=.2/i*cos(i*1.5*uv.x+uTime);
     }
-    vec3 color=mix(vec3(0.),vec3(.1216,.302,0.),uv.y*uv.x);
+    vec3 color=mix(vec3(0.),vec3(1.,0.,0.),uv.y*uv.x);
     gl_FragColor=vec4(color/abs(sin(uTime-uv.y-uv.x)),1.);
 }
