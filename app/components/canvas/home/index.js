@@ -21,7 +21,7 @@ export default class Home {
             speed: { value: 10.0 },
             charSize: { value: { x: 1.0, y: 1.0 } },
             charResolution: { value: 10 },
-            color: { value: new THREE.Color('#1A5D1A') },
+            color: { value: new THREE.Color('#BB2525') },
             resolution: { value: { x: 2.0, y: 2.0 } },
         }
 
